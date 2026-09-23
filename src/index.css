@@ -1,0 +1,21 @@
+:root {
+  --page-bg: #091522;
+  --header-bg: #142235;
+  --control-bg: #162438;
+  --text-main: #d8e1ec;
+  --text-muted: #91a5ba;
+  --accent: #3f7df5;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Trebuchet MS", Arial, sans-serif;
+}
+
+body {
+  min-width: 320px;
+  background: var(--page-bg);
+  color: var(--text-main);
+}
