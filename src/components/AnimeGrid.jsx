@@ -1,7 +1,15 @@
+import { useNavigate } from "react-router-dom";
 import  AnimeCard  from "./AnimeCard";
 import "./AnimeGrid.css"
 
-function AnimeGrid({animeList, onSelectAnime}) {
+function AnimeGrid({animeList}) {
+const navigate = useNavigate();
+
+  const onSelectAnime = (anime) => {
+    navigate(`/anime/${anime.id}`);
+  }
+
+  
   return (
       <div className="anime-grid">
         {animeList.map((anime) => (

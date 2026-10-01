@@ -1,12 +1,14 @@
 import SearchBar from "./SearchBar";
 import  AnimeGrid  from "./AnimeGrid";
 
-function SearchView({animeList, onSearch, onSelectAnime}) {
+function SearchView({ onSearch, animeList, onSelectAnime}) {
   
   return (
     <>
       <SearchBar onSearch={onSearch}/>
-      <AnimeGrid animeList={animeList} onSelectAnime={onSelectAnime}/>
+      <AnimeGrid 
+        animeList={animeList} 
+        onSelectAnime={onSelectAnime}/>
     </>
   )
 }
