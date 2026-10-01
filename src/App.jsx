@@ -1,13 +1,12 @@
 import { Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
 import BrowsePage from "./pages/BrowsePage";
 import DetailPage from "./pages/DetailPage";
 import MyListPage from "./pages/MyListPage";
-import Header from "./components/Header";
 import "./App.css";
 
 
 function App() {
-
 
   return (
     <>
