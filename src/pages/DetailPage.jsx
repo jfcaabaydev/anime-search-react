@@ -85,7 +85,7 @@ function DetailPage() {
 
         {isInWatchList && (
           <button onClick={() => toggleFavorite(id)}>
-            {watchList.find((w) => w.id === id)?.favorite
+            {watchList.find((a) => a.id === id)?.favorite
               ? "★ Favorited"
               : "☆ Favorite"}
           </button>
