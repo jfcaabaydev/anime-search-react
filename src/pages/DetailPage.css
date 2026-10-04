@@ -1,45 +1,75 @@
-.detail-view {
-  display: grid;
-  grid-template-columns: minmax(220px, 300px) 1fr;
-  gap: 32px;
-  width: min(100% - 48px, 900px);;
-  margin: 48px auto;
-  padding: 28px;
-  border-radius: 8px;
-  background: var(--header-bg);
+.detail-page {
+  width: min(100% - 2rem, 1180px);
+  margin: 0 auto;
+  padding: 2rem 0;
 }
 
-.detail-view img {
+.detail-back {
+  display: inline-block;
+  margin-bottom: 1rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.detail-back:hover {
+  color: var(--accent);
+}
+
+.detail-view {
+  display: grid;
+  grid-template-columns: minmax(150px, 220px) minmax(0, 1fr) minmax(190px, 220px);
+  align-items: start;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid var(--control-bg);
+  border-radius: 8px;
+  background-color: var(--header-bg);
+}
+
+.detail-poster {
+  display: block;
   width: 100%;
+  aspect-ratio: 2 / 3;
+  object-fit: cover;
   border-radius: 6px;
 }
 
-.detail-view p {
-  margin-bottom:  16px;
+.detail-content {
+  display: grid;
+  min-width: 0;
+  gap: 1.5rem;
+}
+
+.detail-title {
+  margin-bottom: 0.75rem;
+  color: var(--text-main);
+  font-size: 1.6rem;
+  font-weight: 700;
+  line-height: 1.25;
+  overflow-wrap: anywhere;
+}
+
+.detail-synopsis {
   color: var(--text-muted);
-  line-height: 1.6;
+  line-height: 1.7;
 }
 
-.detail-view button {
-  width: fit-content;
-  padding: 10px 20px;
-  border: none;
+.detail-meta {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+.detail-meta p {
+  padding: 0.75rem;
   border-radius: 5px;
-  cursor: pointer;
-  background: var(--accent);
-  color: #ffffff;
-  font-weight: 600;
+  background-color: var(--control-bg);
+  color: var(--text-main);
+  line-height: 1.4;
 }
 
-.detail-view button:hover {
-  background: #6195ff;
-}
-
-@media (max-width: 650px) {
-  .detail-view {
-    grid-template-columns: 1fr;
-    width: min(100% - 32px, 480px);
-    margin: 24px auto;
-    padding: 20px;
-  }
+.detail-actions {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
 }
