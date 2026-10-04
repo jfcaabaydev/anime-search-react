@@ -1,0 +1,130 @@
+.watchlist-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.watchlist-filter {
+  display: flex;
+  justify-content: flex-end;
+  margin-bottom: 1rem;
+}
+
+.watchlist-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 1rem;
+  align-items: stretch;
+}
+
+.watchlist-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1rem;
+  background-color: var(--header-bg);
+  border: 1px solid var(--control-bg);
+}
+
+.watchlist-card > div:first-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.watchlist-card img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 3/4;
+  object-fit: cover;
+  border-radius: 4px;
+}
+
+.watchlist-card p {
+  color: var(--text-main);
+  font-size: 1rem;
+  line-height: 1.4;
+  overflow-wrap: anywhere;
+}
+
+.watchlist-card > div:last-child {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.watchlist-card button,
+.watchlist-card select {
+  width: 100%;
+  min-height: 42px;
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--control-bg);
+  border-radius: 5px;
+  font: inherit;
+}
+
+.watchlist-card select,
+.filter-feature {
+  background-color: var(--control-bg);
+  color: var(--text-main);
+  cursor: pointer;
+}
+
+.watchlist-card button {
+  border-color: var(--accent);
+  background-color: var(--accent);
+  color: white;
+  cursor: pointer;
+  transition: filter 150ms ease;
+}
+
+.watchlist-card button:hover {
+  filter: brightness(1.1);
+}
+
+.watchlist-card select:focus-visible,
+.filter-feature:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.filter-feature {
+  padding: 0.65rem 0.8rem;
+  border: 1px solid var(--control-bg);
+  border-radius: 5px;
+  font: inherit;
+}
+
+.empty-watchlist {
+  grid-column: 1 / -1;
+  padding: 2rem 1rem;
+  color: var(--text-muted);
+  text-align: center;
+}
+
+@media (max-width: 480px) {
+  .watchlist-container {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .watchlist-filter {
+    justify-content: stretch;
+  }
+
+  .filter-feature {
+    width: 100%;
+  }
+}
+
+@media (max-width: 900px) {
+  .watchlist-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  .watchlist-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}

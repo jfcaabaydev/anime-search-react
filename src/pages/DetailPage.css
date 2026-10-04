@@ -9,6 +9,7 @@
   margin-bottom: 1rem;
   color: var(--text-muted);
   text-decoration: none;
+  transition: color 150ms ease;
 }
 
 .detail-back:hover {
